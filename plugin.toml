@@ -1,0 +1,97 @@
+id = "magi3r/noctalia-task-plugin"
+name = "Tasks"
+version = "1.0.0"
+plugin_api = 28
+author = "Magi3r"
+license = "MIT"
+dependencies = ["task"]
+tags = ["productivity", "tasks", "todo", "sync"]
+icon = "checklist"
+description = "Task & Todo manager with TaskChampion sync server support."
+
+[[service]]
+id = "service"
+entry = "service.luau"
+
+[[widget]]
+id = "bar"
+entry = "bar.luau"
+
+  [[widget.setting]]
+  key = "show_count"
+  type = "bool"
+  label_key = "settings.show_count.label"
+  default = true
+
+  [[widget.setting]]
+  key = "glyph"
+  type = "glyph"
+  label_key = "settings.glyph.label"
+  default = "checklist"
+
+[[panel]]
+id = "panel"
+entry = "panel.luau"
+width = 460
+height = 540
+placement = "attached"
+open_near_click = true
+
+[[desktop_widget]]
+id = "desktop"
+entry = "desktop.luau"
+
+  [[desktop_widget.setting]]
+  key = "desktop_max_tasks"
+  type = "int"
+  label_key = "settings.desktop_max_tasks.label"
+  default = 8
+
+[[launcher_provider]]
+id = "launcher"
+entry = "launcher.luau"
+prefix = "todo"
+glyph = "checklist"
+include_in_global_search = true
+
+[[setting]]
+key = "task_binary"
+type = "string"
+label_key = "settings.task_binary.label"
+description_key = "settings.task_binary.description"
+default = "task"
+
+[[setting]]
+key = "auto_sync"
+type = "bool"
+label_key = "settings.auto_sync.label"
+description_key = "settings.auto_sync.description"
+default = true
+
+[[setting]]
+key = "sync_interval_mins"
+type = "int"
+label_key = "settings.sync_interval_mins.label"
+description_key = "settings.sync_interval_mins.description"
+default = 10
+
+[[setting]]
+key = "sync_on_change"
+type = "bool"
+label_key = "settings.sync_on_change.label"
+description_key = "settings.sync_on_change.description"
+default = true
+
+[[setting]]
+key = "show_completed"
+type = "bool"
+label_key = "settings.show_completed.label"
+description_key = "settings.show_completed.description"
+default = false
+
+[[setting]]
+key = "notify_on_sync"
+type = "bool"
+label_key = "settings.notify_on_sync.label"
+description_key = "settings.notify_on_sync.description"
+default = false

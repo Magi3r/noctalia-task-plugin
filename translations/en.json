@@ -1,0 +1,60 @@
+{
+  "settings": {
+    "task_binary": {
+      "label": "Taskwarrior Binary",
+      "description": "Path or command name for Taskwarrior (default: task)"
+    },
+    "auto_sync": {
+      "label": "Automatic Synchronization",
+      "description": "Periodically synchronize tasks with the TaskChampion sync server"
+    },
+    "sync_interval_mins": {
+      "label": "Sync Interval (Minutes)",
+      "description": "How often to automatically sync in the background (set to 0 to disable periodic timer)"
+    },
+    "sync_on_change": {
+      "label": "Sync on Task Change",
+      "description": "Trigger synchronization immediately after adding, completing, or deleting a task"
+    },
+    "show_completed": {
+      "label": "Show Completed Tasks",
+      "description": "Display completed tasks in the panel and desktop widget by default"
+    },
+    "desktop_max_tasks": {
+      "label": "Desktop Max Tasks",
+      "description": "Maximum number of pending tasks to display on the desktop widget"
+    },
+    "notify_on_sync": {
+      "label": "Sync Notifications",
+      "description": "Show system notification on sync errors"
+    }
+  },
+  "ui": {
+    "title": "Tasks",
+    "pending_count": "{count} pending",
+    "completed_count": "{count} completed",
+    "sync_now": "Sync Now",
+    "syncing": "Syncing with TaskChampion...",
+    "synced_just_now": "Synced just now",
+    "synced_ago": "Synced {time} ago",
+    "sync_never": "Not synced yet",
+    "sync_error": "Sync error: {error}",
+    "quick_add_placeholder": "Add a new task... (press Enter to save)",
+    "add": "Add",
+    "search_placeholder": "Search tasks...",
+    "filter_all": "All",
+    "filter_pending": "Pending",
+    "filter_completed": "Completed",
+    "all_projects": "All Projects",
+    "no_tasks": "No tasks found",
+    "all_caught_up": "You're all caught up!",
+    "due": "Due: {date}",
+    "overdue": "Overdue: {date}",
+    "high_priority": "HIGH",
+    "med_priority": "MED",
+    "low_priority": "LOW",
+    "delete_confirm": "Delete task?",
+    "tooltip_title": "Tasks ({count} pending)",
+    "tooltip_sync": "Last sync: {status}"
+  }
+}
